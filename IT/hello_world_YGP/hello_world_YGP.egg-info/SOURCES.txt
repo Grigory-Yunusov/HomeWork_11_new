@@ -1,0 +1,8 @@
+setup.py
+hello_world_YGP/__init__.py
+hello_world_YGP/main.py
+hello_world_YGP.egg-info/PKG-INFO
+hello_world_YGP.egg-info/SOURCES.txt
+hello_world_YGP.egg-info/dependency_links.txt
+hello_world_YGP.egg-info/entry_points.txt
+hello_world_YGP.egg-info/top_level.txt
