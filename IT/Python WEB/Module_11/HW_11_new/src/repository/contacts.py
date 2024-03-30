@@ -1,6 +1,6 @@
-from src.models.models import ContactDB
+from ..models.contacts import ContactDB
 from sqlalchemy.orm import Session
-from ..schemas import ContactCreate
+from ..schemas.contacts import ContactCreate
 from sqlalchemy import or_
 from datetime import datetime, timedelta
 

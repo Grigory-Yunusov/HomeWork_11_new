@@ -1,6 +1,6 @@
 from src.repository import contacts as repository_contacts
 from fastapi import APIRouter, Depends, HTTPException
-from ..schemas import ContactResponse, ContactCreate, ContactBase
+from ..schemas.contacts import ContactResponse, ContactCreate
 from  src.db.database import get_db
 from sqlalchemy.orm import Session
 
