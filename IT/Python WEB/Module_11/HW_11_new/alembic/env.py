@@ -5,9 +5,12 @@ from sqlalchemy import pool
 
 from alembic import context
 
+from src.models.user import UserDB
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+target_metadata = UserDB.metadata
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
