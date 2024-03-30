@@ -1,4 +1,4 @@
-from ..models.contacts import ContactDB
+from ..models.models import ContactDB
 from sqlalchemy.orm import Session
 from ..schemas.contacts import ContactCreate
 from sqlalchemy import or_

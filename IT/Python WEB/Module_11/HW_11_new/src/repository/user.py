@@ -1,5 +1,5 @@
 # src/repository/user.py
-from src.models.user import UserDB
+from src.models.models import UserDB
 from sqlalchemy.orm import Session
 from src.schemas.user import UserCreate
 from passlib.context import CryptContext

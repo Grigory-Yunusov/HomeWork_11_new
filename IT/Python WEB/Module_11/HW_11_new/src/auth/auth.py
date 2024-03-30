@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from jose import JWTError, jwt
 from starlette import status
 from  src.db.database import get_db
-from  ..models.user import UserDB
+from  ..models.models import UserDB
 
 class Hash:
     pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
