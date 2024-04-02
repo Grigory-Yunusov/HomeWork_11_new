@@ -23,6 +23,6 @@ async def authenticate_user(email: str, password: str, db: Session):
     user = db.query(UserDB).filter(UserDB.email == email).first()
     if not user:
         return False
-    if not pwd_context.verify(password, user.hashed_password):
+    if not pwd_context.verify(password, user.password):
         return False
     return user

@@ -19,5 +19,6 @@ class UserDB(Base):
     id = Column(Integer, primary_key=True)
     email = Column(String(150), nullable=False, unique=True)
     password = Column(String(255), nullable=False)
+    # hashed_password = Column(String)
 
 

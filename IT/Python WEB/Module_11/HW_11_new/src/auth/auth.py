@@ -27,10 +27,10 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")
 
 
 # define a function to generate a new access token
-async def create_access_token(data: dict, expires_delta: Optional[float] = None):
+async def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.utcnow() + timedelta(seconds=expires_delta)
+        expire = datetime.utcnow() + expires_delta
     else:
         expire = datetime.utcnow() + timedelta(minutes=15)
     to_encode.update({"exp": expire})

@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends
 from src.routes import contacts
 from src.routes import user
 from src.auth.auth import get_current_user
-from src.models.user import UserDB
+from src.models.models import UserDB
 
 app = FastAPI()
 
