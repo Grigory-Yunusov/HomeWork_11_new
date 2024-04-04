@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from src.db.database import get_db
 from src.repository.user import create_user, authenticate_user
-from src.schemas.user import UserCreate, Token
+from src.schemas.schemas import UserCreate, Token
 from src.auth.auth import create_access_token
 from datetime import timedelta
 from sqlalchemy.exc import IntegrityError
@@ -22,7 +22,7 @@ async def signup(user: UserCreate, db: Session = Depends(get_db)):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="User with this email already exists"
         )
-
+    
 
 @router.post("/login", response_model=Token)
 async def login(email: str, password: str, db: Session = Depends(get_db)):

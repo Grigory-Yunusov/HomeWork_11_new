@@ -1,6 +1,8 @@
 # models.py
 from src.db.database import Base
 from sqlalchemy import Column, Integer, String, Date
+from sqlalchemy.orm import relationship
+from sqlalchemy.sql.schema import ForeignKey
 
 # Database model
 class ContactDB(Base):
@@ -12,6 +14,8 @@ class ContactDB(Base):
     phone_number = Column(String)
     birthday = Column(Date)
     additional_data = Column(String, nullable=True)
+    user_id = Column('user_id', ForeignKey('users.id', ondelete='CASCADE'), default=None)
+    user = relationship('UserDB', backref="contacts")
 
 
 class UserDB(Base):

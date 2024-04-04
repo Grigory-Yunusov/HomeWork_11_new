@@ -1,7 +1,7 @@
 # src/repository/user.py
 from src.models.models import UserDB
 from sqlalchemy.orm import Session
-from src.schemas.user import UserCreate
+from src.schemas.schemas import UserCreate
 from passlib.context import CryptContext
 from src.auth.auth import Hash
 
